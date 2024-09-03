@@ -1,0 +1,12 @@
+name: express-rest-api
+services:
+  app:
+    build: .
+    image: express-rest-api
+    container_name: express-rest-api
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./.env:/app/.env
+      - ./logs:/app/logs
+      - ./public:/app/public
