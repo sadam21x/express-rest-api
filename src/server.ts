@@ -20,7 +20,6 @@ app.use(express.json({ limit: '100mb' }))
 app.use(morgan(':date[iso] :status | :method :url | :response-time ms'))
 app.use(maintenance)
 app.use(express.static(path.join('public')))
-app.use(maintenance)
 app.use(routes)
 app.use(errorHandler)
 

@@ -22,8 +22,7 @@ export const registerSchema = z
 
     confirm_password: z
       .string({ required_error: 'Confirm password is required' })
-      .trim()
-      .min(8, 'Confirm password must be at least 8 characters long'),
+      .trim(),
   })
   .superRefine((val, ctx) => {
     if (val.password !== val.confirm_password) {
